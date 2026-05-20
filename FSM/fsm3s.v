@@ -1,12 +1,12 @@
 module top_module(
     input clk,
     input in,
-    input areset,
+    input reset,
     output out); //
 parameter A=2'd0,B=2'd1,C=2'd2,D=2'd3;
     reg [1:0]state,next_state;
-    always @(posedge clk or posedge areset)begin
-        if(areset)
+    always @(posedge clk)begin
+        if(reset)
             state<=A;
         else
             state<=next_state;

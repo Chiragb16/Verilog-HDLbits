@@ -3,16 +3,16 @@ module top_module(
     input in,
     input areset,
     output out); //
-parameter A=2'd0,B=2'd1,C=2'd2,D=2'd3;
+parameter A=0,B=1,C=2,D=3;
     reg [1:0]state,next_state;
-    always @(posedge clk or posedge areset)begin
+    always @(*)begin
         if(areset)
             state<=A;
         else
             state<=next_state;
     end
     
-    always @(*)begin
+    always @(posedge clk or posedge areset)begin
         case(state)
             A:begin
                 if(in)
