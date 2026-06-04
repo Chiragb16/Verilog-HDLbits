@@ -1,9 +1,9 @@
 module top_module(
     input clk,
-    input areset,    // Asynchronous reset to OFF
+    input areset,   
     input j,
     input k,
-    output out); //  
+    output out); 
 
     parameter OFF=0, ON=1; 
     reg state, next_state;
