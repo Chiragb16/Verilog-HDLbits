@@ -21,6 +21,7 @@ module top_module(
             end
         end
     end
+    
     assign q=shift_reg;
 
 endmodule
